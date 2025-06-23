@@ -1,11 +1,14 @@
 package org.example.hellospring.service;
 
-import org.example.hellospring.repository.MemberRepository;
+import jakarta.transaction.Transactional;
 import org.example.hellospring.domain.Member;
+import org.example.hellospring.repository.MemberRepository;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 @Service
 public class MemberService {
 
