@@ -4,7 +4,7 @@ import org.example.hellospring.domain.Member;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import org.example.hellospring.service.MemberService;
 import java.lang.management.MemoryType;
 import java.util.List;
 
@@ -13,13 +13,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
-    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
-
-    @BeforeEach
-    public void beforeEach() {
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
-    }
 
     @AfterEach
     public void afterEach() {
